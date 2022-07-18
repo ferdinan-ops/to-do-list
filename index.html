@@ -5,23 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>To Do List</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>To do list Apps</title>
 </head>
 
 <body>
     <div class="container">
-        <h1>To Do List</h1>
-        <input type="text" placeholder="Isi list..." id="txt">
-        <button>Add</button>
-        <div class="list">
-            <!-- <label for="check" class=""><input type="checkbox" id="check">Belajar
-                Javascript</label> -->
+        <div class="task-input">
+            <i class="uil uil-align-left"></i>
+            <input type="text" id="textInfo" placeholder="Add a new task">
         </div>
+        <div class="controls">
+            <div class="filter">
+                <span id="all" class="active">All</span>
+                <span id="pending">Pending</span>
+                <span id="completed">Completed</span>
+            </div>
+            <button id="clearBtn">Clear All</button>
+        </div>
+        <ul class="task-box">
+
+        </ul>
     </div>
 
-
-    <script src="script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
