@@ -3,7 +3,6 @@ const taskBox = document.querySelector(".task-box");
 const filters = document.querySelectorAll(".filter span");
 const clearBtn = document.querySelector("#clearBtn");
 
-// localStorage
 let todos = JSON.parse(localStorage.getItem("todo-list"));
 let editId;
 let isEdited = false;
@@ -38,16 +37,13 @@ filters.forEach(btn => {
 });
 
 clearBtn.addEventListener("click", () => {
-    // splice berguna untuk menghapus array dlm jlh banyak => array.splice(index_mulai, index_until)
-    todos.splice(0, todos.length); // hapus index 0 sampai index terkahir
-    localStorage.setItem("todo-list", JSON.stringify(todos)); // update localStorage
+    todos.splice(0, todos.length);
+    localStorage.setItem("todo-list", JSON.stringify(todos));
     showToDoList("all");
 });
 
 showToDoList("all");
 
-
-// Function
 function showToDoList(filter) {
     let li = "";
     todos.forEach((value, index) => {
@@ -82,7 +78,6 @@ function updateStatus(selectedTask) {
         todos[selectedTask.id].status = "pending";
     }
     localStorage.setItem("todo-list", JSON.stringify(todos));
-    // showToDoList("all");
 }
 
 function showMore(moreBtn) {
